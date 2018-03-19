@@ -50,7 +50,7 @@ namespace Sitecore.Support.Modules.EmailCampaign.Core
             _handle = PublishManager.PublishItem(
               itemToPublish,
               targets,
-              new[] { itemToPublish.Language },
+              GetLanguages(itemToPublish),
               true /* deep */,
               true /* compareRevisions */,
               PublishRelatedItems /* publishRelatedItems */);
@@ -122,6 +122,11 @@ namespace Sitecore.Support.Modules.EmailCampaign.Core
         private bool IsItemPublished(Item item, Database[] targets)
         {
             return targets.All(t => t.GetItem(item.ID) != null);
+        }
+
+        private Language[] GetLanguages(Item item)
+        {
+            return item.Database.Languages;
         }
     }
 }
