@@ -1,6 +1,4 @@
-﻿using Sitecore.Globalization;
-
-namespace Sitecore.Support.Modules.EmailCampaign.Core
+﻿namespace Sitecore.Support.Modules.EmailCampaign.Core
 {
     using System;
     using System.Collections.Generic;
@@ -14,6 +12,7 @@ namespace Sitecore.Support.Modules.EmailCampaign.Core
     using Sitecore.Publishing;
     using Sitecore.SecurityModel;
     using Sitecore.Modules.EmailCampaign.Core;
+    using Sitecore.Globalization;
 
     public class PublishingTask : IPublishingTask
     {
