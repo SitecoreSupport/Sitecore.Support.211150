@@ -1,7 +1,6 @@
 ﻿namespace Sitecore.Support.Modules.EmailCampaign.Core.Pipelines.DispatchNewsletter
 {
     using Sitecore.Analytics;
-    using Sitecore.Analytics.Automation.Data.Items;
     using Sitecore.Data;
     using Sitecore.Data.Items;
     using Sitecore.Diagnostics;
@@ -44,22 +43,6 @@
             }
 
             var publishingTask = new Sitecore.Support.Modules.EmailCampaign.Core.PublishingTask(campaignItem, this.logger);
-            publishingTask.PublishAsync();
-
-            return publishingTask;
-        }
-
-        protected override IPublishingTask PublishPlan(MessageItem message)
-        {
-            Assert.ArgumentNotNull(message, "message");
-
-            Item planItem = this.ItemUtilExt.GetItem(message.PlanId);
-            if (planItem == null || planItem.TemplateID != EngagementPlanItem.TemplateID)
-            {
-                return null;
-            }
-
-            var publishingTask = new Sitecore.Support.Modules.EmailCampaign.Core.PublishingTask(planItem, this.logger);
             publishingTask.PublishAsync();
 
             return publishingTask;
