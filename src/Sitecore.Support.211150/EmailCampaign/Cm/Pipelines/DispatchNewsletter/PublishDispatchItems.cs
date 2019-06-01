@@ -67,7 +67,7 @@
         {
             Assert.ArgumentNotNull(message, "message");
 
-            var publishingTask = new PublishingTask(message.InnerItem, this.logger)
+            var publishingTask = new Sitecore.Support.Modules.EmailCampaign.Core.PublishingTask(message.InnerItem, this.logger)
             {
                 PublishRelatedItems = true
             };
@@ -92,7 +92,7 @@
                 return null;
             }
 
-            var publishingTask = new PublishingTask(campaignItem, this.logger);
+            var publishingTask = new Sitecore.Support.Modules.EmailCampaign.Core.PublishingTask(campaignItem, this.logger);
             publishingTask.PublishAsync();
 
             return publishingTask;

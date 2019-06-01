@@ -70,7 +70,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PublishDispatchItems.cs" />
+    <Compile Include="EmailCampaign\Cm\Pipelines\DispatchNewsletter\PublishDispatchItems.cs" />
+    <Compile Include="Modules\EmailCampaign\Core\PublishingTask.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\zzz\Sitecore.Support.211150.config" />
