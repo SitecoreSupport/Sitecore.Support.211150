@@ -1,16 +1,16 @@
 ﻿namespace Sitecore.Support.EmailCampaign.Cm.Pipelines.DispatchNewsletter
 {
-    using Sitecore.Diagnostics;
-    using Sitecore.EmailCampaign.Cm.Pipelines.DispatchNewsletter;
-    using Sitecore.Modules.EmailCampaign.Core;
-    using Sitecore.Modules.EmailCampaign.Messages;
-    using Sitecore.Modules.EmailCampaign.Services;
     using System;
     using System.Linq;
     using Sitecore.Analytics;
     using Sitecore.Data;
-    using ExM.Framework.Diagnostics;
-    using SecurityModel;
+    using Sitecore.Diagnostics;
+    using Sitecore.EmailCampaign.Cm.Pipelines.DispatchNewsletter;
+    using Sitecore.ExM.Framework.Diagnostics;
+    using Sitecore.Modules.EmailCampaign.Core;
+    using Sitecore.Modules.EmailCampaign.Messages;
+    using Sitecore.Modules.EmailCampaign.Services;
+    using Sitecore.SecurityModel;
 
     public class PublishDispatchItems
     {
