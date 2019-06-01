@@ -48,7 +48,7 @@
             _handle = PublishManager.PublishItem(
               itemToPublish,
               targets,
-              new[] { itemToPublish.Language },
+              itemToPublish.Database.Languages,
               true /* deep */,
               true /* compareRevisions */,
               PublishRelatedItems /* publishRelatedItems */);
